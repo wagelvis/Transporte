@@ -64,9 +64,7 @@
                         </td>
                         <td>{{$registro_transportistum->updated_at}}</td>
                     </tr>
-                    
 
-                        
                 </tbody>
             </table>
         </div>

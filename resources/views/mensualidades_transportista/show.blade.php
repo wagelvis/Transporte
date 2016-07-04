@@ -11,8 +11,8 @@
             <br>
             <table class = 'table table-bordered table-hover'>
                 <thead>
-                    <th class="col-md-6">Campo</th>
-                    <th class="col-md-6">Datos del Registro</th>
+                    <th class="col-md-6 info">Campo</th>
+                    <th class="col-md-6 info">Datos del Registro</th>
                 </thead>
                 <tbody>
 
