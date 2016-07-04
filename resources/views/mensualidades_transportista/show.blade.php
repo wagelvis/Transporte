@@ -1,63 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Show Mensualidades_transportista</title>
-    </head>
-    <body>
+@extends('layouts.app')
+@section('content')
         <div class = 'container'>
-            <h1>Show Mensualidades_transportista</h1>
+            <div class="page-header">
+                <h1>Mensualidad <small> - Información de Registro</small></h1>
+            </div>
             <br>
-            <form method = 'get' action = 'http://localhost/php/railiz/transporte/public/mensualidades_transportista'>
-                <button class = 'btn btn-primary'>Mensualidades_transportista Index</button>
+            <form method = 'get' action = '../mensualidades_transportista'>
+                <button class = 'btn btn-default'><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Regresar</button>
             </form>
             <br>
-            <table class = 'table table-bordered'>
+            <table class = 'table table-bordered table-hover'>
                 <thead>
-                    <th>Key</th>
-                    <th>Value</th>
+                    <th class="col-md-6">Campo</th>
+                    <th class="col-md-6">Datos del Registro</th>
                 </thead>
                 <tbody>
 
                     
                     <tr>
                         <td>
-                            <b><i>id_transportista : </i></b>
+                            <b><i>id: </i></b>
                         </td>
                         <td>{{$mensualidades_transportista->id_transportista}}</td>
                     </tr>
                     
                     <tr>
                         <td>
-                            <b><i>comprobante_pago : </i></b>
+                            <b><i>Comprobante de Pago: </i></b>
                         </td>
                         <td>{{$mensualidades_transportista->comprobante_pago}}</td>
                     </tr>
                     
                     <tr>
                         <td>
-                            <b><i>codigo_deposito : </i></b>
+                            <b><i>Código de Depósito: </i></b>
                         </td>
                         <td>{{$mensualidades_transportista->codigo_deposito}}</td>
                     </tr>
                     
                     <tr>
                         <td>
-                            <b><i>fecha_pago : </i></b>
+                            <b><i>Fecha de Pago: </i></b>
                         </td>
                         <td>{{$mensualidades_transportista->fecha_pago}}</td>
                     </tr>
-                    
 
-                        
+                    <tr>
+                        <td>
+                            <b><i>Fecha de Creación: </i></b>
+                        </td>
+                        <td>{{$mensualidades_transportista->created_at}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <b><i>Fecha de Actualización: </i></b>
+                        </td>
+                        <td>{{$mensualidades_transportista->updated_at}}</td>
+                    </tr>
+
                 </tbody>
             </table>
         </div>
-    </body>
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</html>
+@endsection

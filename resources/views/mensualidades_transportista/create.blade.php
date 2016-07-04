@@ -1,48 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Create Mensualidades_transportista</title>
-    </head>
-    <body>
+@extends('layouts.app')
+@section('content')
         <div class = 'container'>
-            <h1>Create Mensualidades_transportista</h1>
-            <form method = 'get' action = 'http://localhost/php/railiz/transporte/public/mensualidades_transportista'>
-                <button class = 'btn btn-danger'>Mensualidades_transportista Index</button>
+            <div class="page-header">
+                <h1>Transportistas <small> - Agregar Mensualidad</small></h1>
+            </div>
+            <form method = 'get' action = '../mensualidades_transportista'>
+                <button class = 'btn btn-danger'><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Regresar</button>
             </form>
             <br>
-            <form method = 'POST' action = 'http://localhost/php/railiz/transporte/public/mensualidades_transportista'>
-                <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>
-                
-                <div class="form-group">
-                    <label for="id_transportista">id_transportista</label>
-                    <input id="id_transportista" name = "id_transportista" type="text" class="form-control">
-                </div>
-                
-                <div class="form-group">
-                    <label for="comprobante_pago">comprobante_pago</label>
-                    <input id="comprobante_pago" name = "comprobante_pago" type="text" class="form-control">
-                </div>
-                
-                <div class="form-group">
-                    <label for="codigo_deposito">codigo_deposito</label>
-                    <input id="codigo_deposito" name = "codigo_deposito" type="text" class="form-control">
-                </div>
-                
-                <div class="form-group">
-                    <label for="fecha_pago">fecha_pago</label>
-                    <input id="fecha_pago" name = "fecha_pago" type="text" class="form-control">
-                </div>
-                
-                
-                <button class = 'btn btn-primary' type ='submit'>Create</button>
-            </form>
+            <div class="row">
+                <form method = 'POST' action = '../mensualidades_transportista'>
+                    <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="id_transportista">id</label>
+                            <input id="id_transportista" name = "id_transportista" type="text" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="comprobante_pago">Comprobante de Pago</label>
+                            <input id="comprobante_pago" name = "comprobante_pago" type="text" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="codigo_deposito">Código de Depósito</label>
+                            <input id="codigo_deposito" name = "codigo_deposito" type="text" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="fecha_pago">Fecha de Pago</label>
+                            <input id="fecha_pago" name = "fecha_pago" type="text" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <button class = 'btn btn-success btn-lg' type ='submit'><span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span> Guardar Registro</button>
+                    </div>
+                </form>
+            </div>
         </div>
-    </body>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</html>
+@endsection

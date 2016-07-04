@@ -62,7 +62,6 @@ class Mensualidades_transportistaController extends Controller
 
         
         $mensualidades_transportista->fecha_pago = $input['fecha_pago'];
-
         
         
         $mensualidades_transportista->save();
