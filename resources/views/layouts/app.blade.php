@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -85,7 +85,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p class="text-muted">Trabajo de Tesis de Grado | Transporte Escolar - 2016</p>
+            <p class="text-muted">Trabajo de Tesis de Grado | Transporte Escolar - <?php echo date("Y") ?></p>
         </div>
     </footer>
 
