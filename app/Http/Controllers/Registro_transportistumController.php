@@ -148,7 +148,6 @@ class Registro_transportistumController extends Controller
         $registro_transportistum->fecha_registro = $input['fecha_registro'];
         
         $registro_transportistum->save();
-
         return redirect('registro_transportistum');
     }
 

@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
         <div class = 'container'>
             <div class="page-header">
@@ -20,7 +19,7 @@
                     <th>Sector</th>
                     <th>Colegio</th>
                     <th>Fecha de Registro</th>
-                    <th class="col-sm-2" style="text-align: center;">Acciones</th>
+                    <th class="col-sm-2" style="text-align: cen">Acciones</th>
                 </thead>
                 <tbody>
                     @foreach($registro_transportistas as $value)
