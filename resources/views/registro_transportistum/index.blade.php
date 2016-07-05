@@ -32,7 +32,7 @@
                         <td>{{$value->fecha_registro}}</td>
                         <td style="text-align: center;">
                             <a href = './registro_transportistum/{{$value->id}}' class = 'viewShow btn btn-warning btn-sm' title="Ver"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
-                            <a href = './registro_transportistum/{{$value->id}}/edit' class = 'viewEdit btn btn-primary btn-sm' title="Editar"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></i></a>
+                            <a href = './registro_transportistum/{{$value->id}}/edit' class = 'viewEdit btn btn-primary btn-sm' title="Editar"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
                             {{--<a data-toggle="modal" data-target="#myModal" class = 'delete btn btn-danger btn-sm' data-link = "/registro_transportistum/{{$value->id}}/deleteMsg" ><i class = 'material-icons'>Eliminar</i></a>--}}
                         </td>
                     </tr>
