@@ -75,9 +75,8 @@
     </nav>
     <div class="container">
         <ol class="breadcrumb">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Administración</a></li>
-            <li class="active">Sección</li>
+            <li><a href="{{ url('/') }}">Inicio</a></li>
+            <li class="active">Administración</li>
         </ol>
     </div>
 
