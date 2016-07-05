@@ -1,63 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Show Controlpago_cliente</title>
-    </head>
-    <body>
+@extends('layouts.app')
+@section('content')
         <div class = 'container'>
-            <h1>Show Controlpago_cliente</h1>
+            <div class="page-header">
+                <h1>Clientes <small> - Información del Pago</small></h1>
+            </div>
             <br>
-            <form method = 'get' action = 'http://localhost/php/railiz/transporte/public/controlpago_cliente'>
-                <button class = 'btn btn-primary'>Controlpago_cliente Index</button>
+            <form method = 'get' action = '../controlpago_cliente'>
+                <button class = 'btn btn-default'><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Regresar</button>
             </form>
             <br>
-            <table class = 'table table-bordered'>
+            <table class = 'table table-bordered table-hover'>
                 <thead>
-                    <th>Key</th>
-                    <th>Value</th>
+                    <th class="col-md-6 info">Campo</th>
+                    <th class="col-md-6 info">Datos del Registro</th>
                 </thead>
                 <tbody>
 
                     
                     <tr>
                         <td>
-                            <b><i>ci_representante : </i></b>
+                            <b><i>CI. del Representante: </i></b>
                         </td>
                         <td>{{$controlpago_cliente->ci_representante}}</td>
                     </tr>
                     
                     <tr>
                         <td>
-                            <b><i>comprobante_pago : </i></b>
+                            <b><i>Comprobante de Pago: </i></b>
                         </td>
                         <td>{{$controlpago_cliente->comprobante_pago}}</td>
                     </tr>
                     
                     <tr>
                         <td>
-                            <b><i>codigo_deposito : </i></b>
+                            <b><i>Código de Depósito: </i></b>
                         </td>
                         <td>{{$controlpago_cliente->codigo_deposito}}</td>
                     </tr>
                     
                     <tr>
                         <td>
-                            <b><i>fecha_pago : </i></b>
+                            <b><i>Fecha de Pago: </i></b>
                         </td>
                         <td>{{$controlpago_cliente->fecha_pago}}</td>
                     </tr>
-                    
+
+                    <tr>
+                        <td>
+                            <b><i>Fecha de Creación: </i></b>
+                        </td>
+                        <td>{{$controlpago_cliente->created_at}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <b><i>Fecha de Actualización: </i></b>
+                        </td>
+                        <td>{{$controlpago_cliente->updated_at}}</td>
+                    </tr>
 
                         
                 </tbody>
             </table>
         </div>
-    </body>
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</html>
+        </div>
+@endsection

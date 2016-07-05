@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
         <div class = 'container'>
             <h1>Inscripcion_cliente Index</h1>
