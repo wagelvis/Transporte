@@ -57,7 +57,7 @@ class Inscripcion_clienteController extends Controller
         $inscripcion_cliente->colegio_estudiante = $input['colegio_estudiante'];
         $inscripcion_cliente->grado_estudiante = $input['grado_estudiante'];
         $inscripcion_cliente->seccion_estudiante = $input['seccion_estudiante'];
-        $inscripcion_cliente->seccion_estudiante = $input['turno_estudiante'];
+        $inscripcion_cliente->turno_estudiante = $input['turno_estudiante'];
         $inscripcion_cliente->telefono_estudiante = $input['telefono_estudiante'];
         $inscripcion_cliente->nombre_representante = $input['nombre_representante'];
         $inscripcion_cliente->apellido_representante = $input['apellido_representante'];
@@ -126,7 +126,7 @@ class Inscripcion_clienteController extends Controller
         $inscripcion_cliente->colegio_estudiante = $input['colegio_estudiante'];
         $inscripcion_cliente->grado_estudiante = $input['grado_estudiante'];
         $inscripcion_cliente->seccion_estudiante = $input['seccion_estudiante'];
-        $inscripcion_cliente->seccion_estudiante = $input['turno_estudiante'];
+        $inscripcion_cliente->turno_estudiante = $input['turno_estudiante'];
         $inscripcion_cliente->telefono_estudiante = $input['telefono_estudiante'];
         $inscripcion_cliente->nombre_representante = $input['nombre_representante'];
         $inscripcion_cliente->apellido_representante = $input['apellido_representante'];
