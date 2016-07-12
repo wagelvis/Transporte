@@ -28,6 +28,7 @@ class InscripcionClientes extends Migration
         $table->String('colegio_estudiante');
         $table->String('grado_estudiante');
         $table->String('seccion_estudiante');
+        $table->String('turno_estudiante');
         $table->integer('telefono_estudiante');
         $table->String('nombre_representante');
         $table->String('apellido_representante');
@@ -37,11 +38,11 @@ class InscripcionClientes extends Migration
         $table->date('fecha_inscripcion');
         $table->String('contrato_inscripcion');
         $table->timestamps();
-        
+
         /**
          * Foreignkeys section
          */
-        
+
         // type your addition here
 
         });

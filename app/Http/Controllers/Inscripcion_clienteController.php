@@ -34,7 +34,7 @@ class Inscripcion_clienteController extends Controller
      */
     public function create()
     {
-        
+
         return view('inscripcion_cliente.create'
                 );
     }
@@ -48,61 +48,25 @@ class Inscripcion_clienteController extends Controller
     public function store(Request $request)
     {
         $input = Request::except('_token');
-
         $inscripcion_cliente = new Inscripcion_cliente();
-
-        
         $inscripcion_cliente->nombre_estudiante = $input['nombre_estudiante'];
-
-        
         $inscripcion_cliente->apellido_estudiante = $input['apellido_estudiante'];
-
-        
         $inscripcion_cliente->sector_ruta = $input['sector_ruta'];
-
-        
         $inscripcion_cliente->calle_ruta = $input['calle_ruta'];
-
-        
         $inscripcion_cliente->casa_ruta = $input['casa_ruta'];
-
-        
         $inscripcion_cliente->colegio_estudiante = $input['colegio_estudiante'];
-
-        
         $inscripcion_cliente->grado_estudiante = $input['grado_estudiante'];
-
-        
         $inscripcion_cliente->seccion_estudiante = $input['seccion_estudiante'];
-
-        
+        $inscripcion_cliente->seccion_estudiante = $input['turno_estudiante'];
         $inscripcion_cliente->telefono_estudiante = $input['telefono_estudiante'];
-
-        
         $inscripcion_cliente->nombre_representante = $input['nombre_representante'];
-
-        
         $inscripcion_cliente->apellido_representante = $input['apellido_representante'];
-
-        
         $inscripcion_cliente->ci_representante = $input['ci_representante'];
-
-        
         $inscripcion_cliente->id_usuario = $input['id_usuario'];
-
-        
         $inscripcion_cliente->telefono_representante = $input['telefono_representante'];
-
-        
         $inscripcion_cliente->fecha_inscripcion = $input['fecha_inscripcion'];
-
-        
         $inscripcion_cliente->contrato_inscripcion = $input['contrato_inscripcion'];
-
-        
-        
         $inscripcion_cliente->save();
-
         return redirect('inscripcion_cliente');
     }
 
@@ -136,7 +100,7 @@ class Inscripcion_clienteController extends Controller
             return URL::to('inscripcion_cliente/'. $id . '/edit');
         }
 
-        
+
         $inscripcion_cliente = Inscripcion_cliente::findOrfail($id);
         return view('inscripcion_cliente.edit',compact('inscripcion_cliente'
                 )
@@ -153,44 +117,25 @@ class Inscripcion_clienteController extends Controller
     public function update($id)
     {
         $input = Request::except('_token');
-
         $inscripcion_cliente = Inscripcion_cliente::findOrfail($id);
-    	
         $inscripcion_cliente->nombre_estudiante = $input['nombre_estudiante'];
-        
         $inscripcion_cliente->apellido_estudiante = $input['apellido_estudiante'];
-        
         $inscripcion_cliente->sector_ruta = $input['sector_ruta'];
-        
         $inscripcion_cliente->calle_ruta = $input['calle_ruta'];
-        
         $inscripcion_cliente->casa_ruta = $input['casa_ruta'];
-        
         $inscripcion_cliente->colegio_estudiante = $input['colegio_estudiante'];
-        
         $inscripcion_cliente->grado_estudiante = $input['grado_estudiante'];
-        
         $inscripcion_cliente->seccion_estudiante = $input['seccion_estudiante'];
-        
+        $inscripcion_cliente->seccion_estudiante = $input['turno_estudiante'];
         $inscripcion_cliente->telefono_estudiante = $input['telefono_estudiante'];
-        
         $inscripcion_cliente->nombre_representante = $input['nombre_representante'];
-        
         $inscripcion_cliente->apellido_representante = $input['apellido_representante'];
-        
         $inscripcion_cliente->ci_representante = $input['ci_representante'];
-        
         $inscripcion_cliente->id_usuario = $input['id_usuario'];
-        
         $inscripcion_cliente->telefono_representante = $input['telefono_representante'];
-        
         $inscripcion_cliente->fecha_inscripcion = $input['fecha_inscripcion'];
-        
         $inscripcion_cliente->contrato_inscripcion = $input['contrato_inscripcion'];
-        
-        
         $inscripcion_cliente->save();
-
         return redirect('inscripcion_cliente');
     }
 

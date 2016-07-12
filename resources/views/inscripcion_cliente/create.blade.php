@@ -54,7 +54,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="form-group">
                             <label for="colegio_estudiante">Colegio del Estudiante</label>
                             <input id="colegio_estudiante" name = "colegio_estudiante" type="text" class="form-control" placeholder="Nombre del Colegio" required>
@@ -85,6 +85,17 @@
                                 <option value="B">B</option>
                                 <option value="C">C</option>
                                 <option value="D">D</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="turno_estudiante">Turno del Estudiante</label>
+                            {{--<input id="seccion_estudiante" name = "seccion_estudiante" type="text" class="form-control">--}}
+                            <select name="turno_estudiante" id="turno_estudiante" class="form-control" required>
+                                <option value="">Mañana</option>
+                                <option value="">Tarde</option>
                             </select>
                         </div>
                     </div>
